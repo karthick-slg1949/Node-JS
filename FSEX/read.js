@@ -1,5 +1,5 @@
 import fs from 'fs'
 
-let data=fs.readFileSync('data.txt','utf-8')
+let data=fs.path('D:\Node JS\FSEX\bangalore/data.txt','utf-8')
 console.log(data)
 
