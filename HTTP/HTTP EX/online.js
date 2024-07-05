@@ -1,7 +1,7 @@
 const http=require('http')
 
 let server=http.createServer((req,resp)=>{
-    resp.end("<h2>Vanga palagalam</h2>")
+    resp.end("<h2>Good Morning</h2>")
 })
 
 server.listen(8080,'127.0.0.1',(err)=>{
