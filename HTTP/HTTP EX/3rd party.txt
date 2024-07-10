@@ -1,0 +1,20 @@
+3rd party modules
+  *dotenv
+  *node modules
+
+express
+bcrypt  
+json
+
+chalk
+morgon
+cores
+
+mysql
+mongodb
+
+core happy js
+  *fs
+  *os
+  *path
+  *http
