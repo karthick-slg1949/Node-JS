@@ -7,7 +7,7 @@ let router = express.Router()
     Method:POST
     Access Type:Public
     Req Fields:eid,ename,salary
-*/
+*/ 
 router.post("/create",async(req,resp)=>{
     let emp_Data=req.body;
     console.log(emp_Data);

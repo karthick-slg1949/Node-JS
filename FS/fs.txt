@@ -1,0 +1,14 @@
+
+fs.readfilesync('filename.txt','utf-8)
+log(filename)//synchronous
+
+fs.readfile('filename.txt','utf-8,(err,data)=>{
+    log(data)
+})//Asynchronous
+
+fs.readfile('filename.txt','utf-8,(err,data)=>{
+    fs.writefile('one.txt',data,(err)=>{
+        if(err)throw err
+        log(data) 
+    })
+})//write file
