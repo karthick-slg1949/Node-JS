@@ -1,0 +1,12 @@
+
+cmd>
+npm init -y
+npm i express morgan chalk dotenv nodemon
+
+update package.json
+
+=====================
+app.js 
+routing/empRouter.js 
+config/dev.config 
+data.json 
