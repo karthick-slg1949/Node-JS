@@ -2,7 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
 import chalk from 'chalk'
-import empRouter from './routing/empRouter.js'
+import empRouter from './Routing/empRouter.js'
 //create express app 
 let app = express();
 
