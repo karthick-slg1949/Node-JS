@@ -1,5 +1,5 @@
 import express from "express";
-import product from '../Modles/Product.js'
+import Product from '../Model/Product.js'
 let router= express.Router();
 
 /*
@@ -11,7 +11,7 @@ router.get("/",(req,resp)=>{
 /*
     USAGE: get all products
     URL: http://127.0.0.1:8080/product/read
-    MEthod:GET
+    Method:GET
     Fields:none
     Access Type:Public
 */
