@@ -1,5 +1,5 @@
 import express from "express";
-import EmployeeModel from '../models/employee.js'
+import EmployeeModel from '../Module/employee.js'
 let router=express.Router();
 
 //URL:localhost:8080/emp/
@@ -23,7 +23,7 @@ router.get("/read", async (req,resp)=>{
 })
 /*
     Usage: create new employee
-    URL:http://127.0.0.1:8080/emp/create
+    URL:http://127.0.0.1:4000/emp/create
     Method:POST
     Req Fields:eid,ename,esal
 */

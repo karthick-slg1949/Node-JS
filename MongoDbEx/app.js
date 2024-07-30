@@ -1,15 +1,15 @@
-import express from 'express'
+import express,{response} from 'express'
 import morgan from 'morgan'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
-import empRouter from './routing/empRouter.js'
+import empRouter from './Routing/empRouter.js'
 //create express app
 let app = express()
 
 
 //how to read form data
 app.use(express.json());
-app.use(express.urlencoded({extended:true}))
+ app.use(express.urlencoded({extended:true}))
 
 app.use(morgan('dev'))
 
@@ -22,19 +22,19 @@ app.get("/",(req,resp)=>{
 dotenv.config({path:'./config/dev.env'})
 let port=process.env.PORT 
 let host=process.env.HOST_NAME
-//let dburl=process.env.MONGO_LOCAL_URL
+  let dburl=process.env.MONGO_LOCAL_URL
 
 //connecting mongodb using moongoose
 // connect to Mongo DB Database
-mongoose.connect(process.env.MONGO_LOCAL_URL, {
-    useUnifiedTopology : true,
-    useNewUrlParser : true,
-}).then((response) => {
-    console.log(`Connected to Mongo DB Successfully...........`);
-}).catch((err) => {
+mongoose.connect(process.env.MONGO_LOCAL_URL,{
+    useUnifiedTopology:true,
+    useNewUrlParser:true,
+}).then((response)=>{
+    console.log(`connected mongodb successfully.........`);
+}).catch((err)=>{
     console.error(err);
-    process.exit(1); // stop the node js process if unable to connect to mongodb
-});
+    process.exit(1);//stop the node js process if unable to connect to mongodb
+})
 
 
 app.listen(port,host,(err)=>{
